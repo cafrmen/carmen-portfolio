@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    overflow: clip;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #425F57;
+    color: #FFFBE0;
+    width: 100vw;
+    height: 100vh; /* altura del navegador */
+    display: flex;  /* flex para que esté centrado con justify y align */
+    justify-content: center; /* horizontal */
+    align-items: center;  /* vertical */
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+/* La imagen de fondo */
+.bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('../media/fondo2.jpg') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation 73.12s infinite; /* nombre de la animación */
+    opacity: .3;
+    visibility: visible;
+    z-index: -1;
+  }
+
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(0, 0) }
+  }
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* horizontal */
+    align-items: center;  /* vertical */
+    opacity: .712;
+    text-align: center;
+}
+
+main h1 {
+    margin: 3px;
+}
+
+main h3 {
+    margin: 3px;
+}
+
+main i {
+    margin: 3px;
+    font-size: 12em;
+    transition: ease-in-out .712s;
+    color: #FFFBE0;
+}
+
+main i:hover {
+    font-size: 30em;
+}

@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    overflow: clip;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1D5C63;
+    color: #1D5C63;
+    width: 100vw;
+    height: 100vh; /* altura del navegador */
+    display: flex;  /* flex para que esté centrado con justify y align */
+    justify-content: center; /* horizontal */
+    align-items: center;  /* vertical */
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+/* La imagen de fondo */
+.bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('../media/fondo2.jpg') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation 37.12s infinite; /* nombre de la animación */
+    opacity: .3;
+    visibility: visible;
+    z-index: -1;
+  }
+
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(0, 0) }
+  }
+
+/* El recuadro interior */
+div.portrait {
+    background-color: aliceblue;
+    width: 96vw;
+    height: 96vh;
+    border-radius: 3px;
+    opacity: .999;
+}
+
+/* El navegador */
+span.hiddenMenu {
+    display: none;
+}
+
+span ul {
+    padding: 0;
+    margin: 0;
+}
+
+span ul li {
+    font-size: 2.7rem;
+    text-align: center;
+    list-style-position: none;
+}
+
+span ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    background-color: #1D5C63;
+    transition: ease-in-out .3s;
+}
+
+span ul li a:hover {
+    text-decoration: underline;
+    background-color: aliceblue;
+    color: #1D5C63;
+}
+
+header {
+    position: fixed;
+    right: 3.12vw;
+}
+
+header nav  {
+    display: flex;
+}
+
+/* Show de JS */
+span.hiddenMenu.show {
+    display: flex;
+    position: fixed;
+    margin: 0 auto;
+    justify-content: center; /* horizontal */
+    align-items: center;  /* vertical */
+    width: 96vw;
+    height: 96vh;
+    background-color: #1D5C63;
+    opacity: .7;
+}
+
+header nav button.menu {
+    display: flex;
+    border: 0;
+    background-color: transparent;
+    color: #1D5C63;
+    font-size: 3rem;
+    text-align: right;
+    padding: 0%;
+    align-self: flex-end;
+    margin: 20px;
+}
+
+header nav button.menu:focus {
+    outline: 0;
+}
+
+/* Sección principal */
+main {
+    margin: 12px;
+}
+
+main h1 {
+    margin-top: 0;
+}
+
+main section.projects {
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* para que el flexbox sea inline-block */
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 7px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-content: flex-end;
+}
+
+main section.projects img {
+    width: 150px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: ease-in-out .712s;
+}
+
+main section.projects img:hover {
+    width: calc(30vh + 100px);
+    height: 30vh;
+}

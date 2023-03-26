@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    overflow: clip; /* evita que se mueva el navegador */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #425F57;
+    color: #425F57;
+    width: 100vw;
+    height: 100vh; /* altura del navegador */
+    display: flex;  /* flex para que esté centrado con justify y align */
+    justify-content: center; /* horizontal */
+    align-items: center;  /* vertical */
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+/* El recuadro interior */
+div.portrait {
+    background-color: aliceblue;
+    width: 96vw;
+    height: 96vh;
+    border-radius: 3px;
+    opacity: .999;
+}
+
+/* La imagen de fondo */
+.bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('../media/fondo2.jpg') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation 37.12s infinite; /* nombre de la animación */
+    opacity: .3;
+    visibility: visible;
+    z-index: -1;
+  }
+
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(0, 0) }
+  }
+
+/* El navegador */
+span.hiddenMenu {
+    display: none;
+}
+
+span ul {
+    padding: 0;
+    margin: 0;
+}
+
+span ul li {
+    font-size: 2.7rem;
+    text-align: center;
+    list-style-position: none;
+}
+
+span ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    background-color: #425F57;
+    transition: ease-in-out .3s;
+}
+
+span ul li a:hover {
+    text-decoration: underline;
+    background-color: aliceblue;
+    color: #425F57;
+}
+
+header {
+    position: fixed;
+    right: 3.12vw;
+}
+
+header nav  {
+    display: flex;
+}
+
+/* Show de JS */
+span.hiddenMenu.show {
+    display: flex;
+    position: fixed;
+    margin: 0 auto;
+    justify-content: center; /* horizontal */
+    align-items: center;  /* vertical */
+    width: 96vw;
+    height: 96vh;
+    background-color: #425F57;
+    opacity: .7;
+}
+
+header nav button.menu {
+    display: flex;
+    border: 0;
+    background-color: transparent;
+    color: #425F57;
+    font-size: 3rem;
+    text-align: right;
+    padding: 0%;
+    align-self: flex-end;
+    margin: 20px;
+}
+
+header nav button.menu:focus {
+    outline: 0;
+}
+
+/* Sección principal */
+main {
+    margin: 12px;
+}
+
+/* Foto y nombre */
+main section.bio {
+    height: 66vh;
+    margin-left: -30px;
+}
+
+main section.bio img {
+    width: 210px;
+    opacity: .912;
+    border-radius: 50%;
+    transition: ease-in-out .712s;
+}
+
+main section.bio img:hover {
+    border-radius: 30px;
+    opacity: .712;
+}
+
+main section.bio figcaption {
+    width: 210px;
+    text-align: center;
+}
+
+main section.bio figcaption h1 {
+    margin-top: 0;
+}
+
+/* La info */
+article.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+article.info p {
+    width: 217px;
+    text-align: right;
+    margin: 7px 0;
+}
+
+/*
+https://codepen.io/iceable/pen/yLBrZOd
+*/
