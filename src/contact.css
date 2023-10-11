@@ -1,6 +1,12 @@
+@font-face {
+    font-family: Onest;
+    src: url('../fonts/Onest.ttf') format(truetype);
+}
+
 * {
     box-sizing: border-box;
     overflow: clip;
+    transition: all 0.7s ease-in-out;
 }
 
 body {
@@ -13,7 +19,7 @@ body {
     display: flex;  /* flex para que esté centrado con justify y align */
     justify-content: center; /* horizontal */
     align-items: center;  /* vertical */
-    font-family: 'Lato', sans-serif;
+    font-family: 'Onest', sans-serif;
     font-weight: 700;
 }
 
@@ -60,6 +66,7 @@ div.portrait {
 /* El navegador */
 span.hiddenMenu {
     display: none;
+    z-index: 3;
 }
 
 span ul {
@@ -89,6 +96,7 @@ span ul li a:hover {
 header {
     position: fixed;
     right: 3.12vw;
+    z-index: 3;
 }
 
 header nav  {
@@ -105,7 +113,7 @@ span.hiddenMenu.show {
     width: 96vw;
     height: 96vh;
     background-color: #4C0033;
-    opacity: .7;
+    opacity: .98;
 }
 
 header nav button.menu {
@@ -127,6 +135,7 @@ header nav button.menu:focus {
 /* Sección principal */
 main {
     margin: 12px;
+    z-index: 0;
 }
 
 main h1 {
@@ -134,6 +143,9 @@ main h1 {
 }
 
 /* Formulario */
+section {
+    z-index: 0;
+}
 
 section.form form {
     width: 270px;
@@ -150,13 +162,13 @@ section.form form input {
     background-color: aliceblue;
     opacity: 0.7;
     color: #4C0033;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Onest', sans-serif;
 }
 
 section.form form input::placeholder {
     opacity: 0.7;
     color: #4C0033;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Onest', sans-serif;
 }
 
 section.form form input.message {
@@ -165,7 +177,7 @@ section.form form input.message {
 
 section.form form button {
     width: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Onest', sans-serif;
     padding: 7px;
     margin: 0 auto;
     display: block;

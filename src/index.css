@@ -1,6 +1,12 @@
+@font-face {
+    font-family: Onest;
+    src: url('../fonts/Onest.ttf') format(truetype);
+}
+
 * {
     box-sizing: border-box;
     overflow: clip; /* evita que se mueva el navegador */
+    transition: all 0.7s ease-in-out;
 }
 
 body {
@@ -9,11 +15,12 @@ body {
     background-color: #425F57;
     color: #425F57;
     width: 100vw;
-    height: 100vh; /* altura del navegador */
-    display: flex;  /* flex para que esté centrado con justify y align */
-    justify-content: center; /* horizontal */
-    align-items: center;  /* vertical */
-    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Onest', sans-serif;
     font-weight: 700;
 }
 
@@ -23,7 +30,7 @@ div.portrait {
     width: 96vw;
     height: 96vh;
     border-radius: 3px;
-    opacity: .999;
+    opacity: .98;
 }
 
 /* La imagen de fondo */
@@ -37,7 +44,7 @@ div.portrait {
     height: 200vh;
     background: transparent url('../media/fondo2.jpg') repeat 0 0;
     background-repeat: repeat;
-    animation: bg-animation 37.12s infinite; /* nombre de la animación */
+    animation: bg-animation 89s infinite; /* nombre de la animación */
     opacity: .3;
     visibility: visible;
     z-index: -1;
@@ -57,46 +64,47 @@ div.portrait {
       100% { transform: translate(0, 0) }
   }
 
+header {
+    width: 100%;
+}
+
 /* El navegador */
-span.hiddenMenu {
+header span.hiddenMenu {
     display: none;
 }
 
-span ul {
+header span ul {
     padding: 0;
     margin: 0;
 }
 
-span ul li {
+header span ul li {
     font-size: 2.7rem;
     text-align: center;
     list-style-position: none;
 }
 
-span ul li a {
+header span ul li a {
     text-decoration: none;
     color: aliceblue;
     background-color: #425F57;
     transition: ease-in-out .3s;
 }
 
-span ul li a:hover {
+header span ul li a:hover {
     text-decoration: underline;
     background-color: aliceblue;
     color: #425F57;
 }
 
-header {
-    position: fixed;
-    right: 3.12vw;
-}
-
 header nav  {
     display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 /* Show de JS */
-span.hiddenMenu.show {
+header span.hiddenMenu.show {
     display: flex;
     position: fixed;
     margin: 0 auto;
@@ -105,7 +113,8 @@ span.hiddenMenu.show {
     width: 96vw;
     height: 96vh;
     background-color: #425F57;
-    opacity: .7;
+    opacity: .98;
+    z-index: 200;
 }
 
 header nav button.menu {
@@ -118,59 +127,55 @@ header nav button.menu {
     padding: 0%;
     align-self: flex-end;
     margin: 20px;
+    z-index: 300;
 }
 
 header nav button.menu:focus {
     outline: 0;
 }
 
-/* Sección principal */
 main {
-    margin: 12px;
-}
-
-/* Foto y nombre */
-main section.bio {
-    height: 66vh;
-    margin-left: -30px;
-}
-
-main section.bio img {
-    width: 210px;
-    opacity: .912;
-    border-radius: 50%;
-    transition: ease-in-out .712s;
-}
-
-main section.bio img:hover {
-    border-radius: 30px;
-    opacity: .712;
-}
-
-main section.bio figcaption {
-    width: 210px;
-    text-align: center;
-}
-
-main section.bio figcaption h1 {
-    margin-top: 0;
-}
-
-/* La info */
-article.info {
+    width: 96vw;
+    height: 80vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    align-self: flex-end;
 }
 
-article.info p {
-    width: 217px;
-    text-align: right;
-    margin: 7px 0;
+main figure {
+    margin: 0;
+    padding: 0;
+}
+
+main img {
+    max-width: 220px;
+    max-height: 220px;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+main img:hover {
+    opacity: 0.8;
+}
+
+main figcaption {
+    text-align: center;
+    font-size: 1.7em;
+}
+
+main section {
+    max-width: 500px;
+    margin: 12px;
+    text-align: justify;
 }
 
 /*
 https://codepen.io/iceable/pen/yLBrZOd
+
+Breakpoint	Class infix	Dimensions
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
 */

@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/c079cb430f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./sample.css" />
+    <script src="./samples.js" defer></script>
     <title>Caf Portfolio/Source</title>
 </head>
 <body>
@@ -32,25 +30,81 @@
 
         <main>
             <h1>Samples</h1>
+            <h2 class="stopShowing">Tap Any Project</h2>
             <!-- Projects -->
             <section class="projects" >
-                <a>
-                    <img src="../media/artist.png" alt="Artist page" />
-                </a>
-                <a href="https://cafrmen.github.io/my-calculadora-js-main-assignment/" target="_blank" >
-                    <img src="../media/calculator.png" alt="Calculator" />
-                </a>
-                <a href="https://caf-weather-app.netlify.app" target="_blank" >
-                    <img src="../media/weather.png" alt="Weather app" />
-                </a>
-                <a href="https://caf-client-side-validation-form.netlify.app" target="_blank" >
-                    <img src="../media/form.png" alt="Client-side validation form" />
-                </a>
+                <article class="granulator hide">
+                    <h3>
+                        <a href="https://cafrmen.github.io/rnbo-granular/" target="_blank">
+                            Granulator
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </h3>
+                    <p>
+                        The musical part was created in Max/MSP, a visual programming language
+                        for music and multimedia. It was exported to a JSON file thanks to RNBO~.
+                        Finally it was styled with JS and CSS.
+                    </p>
+                </article>
+                <article class="nasa hide">
+                    <h3>
+                        <a href="https://cafrmen.github.io/nasa-api/" target="_blank">
+                            CFR Nasa API Post
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </h3>
+                    <p>
+                        A newspaper where you can find out what the astronomy picture of the day is,
+                        the weekly space weather report, what asteroids will pass near the earth
+                        today and if any were dangerous and finally you can listen to some audios,
+                        all with NASA material thanks to its API.
+                    </p>
+                </article>
+                <article class="rot hide">
+                    <h3>
+                        <a href="https://cafrmen.github.io/Rot13-Cipher/" target="_blank">
+                            Rot-13 (mini game)
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </h3>
+                    <p>
+                        You can convert a phrase to the encryption commonly used in the 80s, it
+                        doesn't offer real security but it's interesting to know how everything
+                        changes over the years... suddenly, a surprise... Coded with React!
+                    </p>
+                </article>
+                <article class="calculator hide">
+                    <h3>
+                        <a href="https://cafrmen.github.io/my-calculadora-js-main-assignment/" target="_blank">
+                            JS Calculator
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </h3>
+                    <p>
+                        We all know that there are libraries to run a calculator and that we
+                        even have the eval() function in JS, but why do something so boring,
+                        it is better to use your own logic. This calculator was created exactly
+                        like this, with pure logic and Vanilla JS, without libraries and with
+                        its own functions. Do you want to see how well it works? So: Try
+                        breaking this calculator!
+                    </p>
+                </article>
             </section>
         </main>
-
-        <!-- JS for menu button -->
-        <script src="./index.js"></script>
+        <footer class="preview">
+            <button id="theGranular">
+                <img src="../media/granular.png" alt="Granular Preview">
+            </button>
+            <button id="theNasaPost">
+                <img src="../media/nasa.png" alt="Nasa API Post Preview">
+            </button>
+            <button id="theRot">
+                <img src="../media/rot-13.png" alt="Rot-13 Preview">
+            </button>
+            <button id="theCalculator">
+                <img src="../media/calculator.png" alt="Calculator">
+            </button>
+        </footer>
     </div>
 </body>
 </html>

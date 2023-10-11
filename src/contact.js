@@ -6,7 +6,7 @@ function toggleButton() {
     if (menuButton.style.color != 'white') {
         menuButton.style.color = 'white';
     } else {
-        menuButton.style.color = '#425F57';
+        menuButton.style.color = '#4C0033';
     }
 }
 menuButton.addEventListener('click', toggleButton);

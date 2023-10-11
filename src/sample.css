@@ -1,6 +1,12 @@
+@font-face {
+    font-family: Onest;
+    src: url('../fonts/Onest.ttf') format(truetype);
+}
+
 * {
     box-sizing: border-box;
-    overflow: clip;
+    overflow: scroll;
+    transition: all 0.7s ease-in-out;
 }
 
 body {
@@ -13,7 +19,7 @@ body {
     display: flex;  /* flex para que esté centrado con justify y align */
     justify-content: center; /* horizontal */
     align-items: center;  /* vertical */
-    font-family: 'Lato', sans-serif;
+    font-family: 'Onest', sans-serif;
     font-weight: 700;
 }
 
@@ -28,7 +34,7 @@ body {
     height: 200vh;
     background: transparent url('../media/fondo2.jpg') repeat 0 0;
     background-repeat: repeat;
-    animation: bg-animation 37.12s infinite; /* nombre de la animación */
+    animation: bg-animation 44s infinite; /* nombre de la animación */
     opacity: .3;
     visibility: visible;
     z-index: -1;
@@ -60,6 +66,7 @@ div.portrait {
 /* El navegador */
 span.hiddenMenu {
     display: none;
+    z-index: 1;
 }
 
 span ul {
@@ -89,6 +96,7 @@ span ul li a:hover {
 header {
     position: fixed;
     right: 3.12vw;
+    z-index: 3;
 }
 
 header nav  {
@@ -105,7 +113,7 @@ span.hiddenMenu.show {
     width: 96vw;
     height: 96vh;
     background-color: #1D5C63;
-    opacity: .7;
+    opacity: .98;
 }
 
 header nav button.menu {
@@ -118,6 +126,7 @@ header nav button.menu {
     padding: 0%;
     align-self: flex-end;
     margin: 20px;
+    z-index: 3;
 }
 
 header nav button.menu:focus {
@@ -127,34 +136,120 @@ header nav button.menu:focus {
 /* Sección principal */
 main {
     margin: 12px;
+    text-align: justify;
 }
 
 main h1 {
     margin-top: 0;
 }
 
-main section.projects {
-    height: 86vh;
+main h2 {
+    text-align: center;
+    height: 70vh;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; /* para que el flexbox sea inline-block */
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+}
+
+section.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+main article {
+    display: block;
+    visibility: visible;
+    padding: 20vh 17vw;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+main a {
+    text-decoration: none;
+    color: #1D5C63;
+}
+
+main i {
+    font-size: 16px;
+    animation: bounceRight 3s infinite;
+}
+
+@keyframes bounceRight {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(0) rotate(-45deg);
+    }
+    40% {
+        transform: translateX(12px) rotate(-45deg);
+    }
+    60% {
+        transform: translateX(7px) rotate(-45deg);
+    }
+}
+
+.preview {
+    width: 100vw;
+    position: absolute;
+    margin: 12px;
+    display: flex;
+    justify-content: center;
     align-items: flex-end;
-    gap: 7px;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-content: flex-end;
+    flex-wrap: wrap;
+    bottom: 17px;
+    right: 0;
 }
 
-main section.projects img {
-    width: 150px;
-    height: 110px;
+.preview button {
+    width: 170px;
+    height: 139px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.preview button:hover {
+    width: 210px;
+    height: 179px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 3px;
-    transition: ease-in-out .712s;
 }
 
-main section.projects img:hover {
-    width: calc(30vh + 100px);
-    height: 30vh;
+@media only screen and (max-width: 650px) {
+    main article {
+        padding: 12px;
+    }
+    .preview {
+        align-items: center;
+    }
+    .preview button {
+        width: 140px;
+        height: 109px;
+    }
+    .preview button:hover {
+        width: 160px;
+        height: 129px;
+    }
 }
+
+/*
+https://codepen.io/iceable/pen/yLBrZOd
+
+Breakpoint	Class infix	Dimensions
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+*/
