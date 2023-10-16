@@ -147,9 +147,22 @@ section {
     z-index: 0;
 }
 
+section.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 section.form form {
-    width: 270px;
+    width: 380px;
     height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 section.form form input {
@@ -172,7 +185,7 @@ section.form form input::placeholder {
 }
 
 section.form form input.message {
-    height: 100px;
+    height: 200px;
 }
 
 section.form form button {
@@ -234,4 +247,10 @@ section.bonus span a {
 section.bonus span a:hover {
     font-size: 3.7em;
     opacity: .812;
+}
+
+@media only screen and (max-width: 600px) {
+    section.form form {
+        width: 80vw;
+    }
 }

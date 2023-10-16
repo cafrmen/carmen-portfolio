@@ -53,8 +53,8 @@ calculatorButton.addEventListener('pointerdown', calculator);
 
 function toggleButton() {
     divMenu.classList.toggle('show');
-    if (menuButton.style.color != 'white') {
-        menuButton.style.color = 'white';
+    if (menuButton.style.color != 'aliceblue') {
+        menuButton.style.color = 'aliceblue';
     } else {
         menuButton.style.color = '#1D5C63';
     }

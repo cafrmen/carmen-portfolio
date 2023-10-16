@@ -3,8 +3,8 @@ const divMenu = document.getElementById('div-menu');
 
 function toggleButton() {
     divMenu.classList.toggle('show');
-    if (menuButton.style.color != 'white') {
-        menuButton.style.color = 'white';
+    if (menuButton.style.color != 'aliceblue') {
+        menuButton.style.color = 'aliceblue';
     } else {
         menuButton.style.color = '#4C0033';
     }

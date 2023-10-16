@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Onest;
+    src: url('../fonts/Onest.ttf') format(truetype);
+}
+
 * {
     box-sizing: border-box;
     overflow: clip;
@@ -7,13 +12,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #425F57;
-    color: #FFFBE0;
+    color: aliceblue;
     width: 100vw;
     height: 100vh; /* altura del navegador */
     display: flex;  /* flex para que esté centrado con justify y align */
     justify-content: center; /* horizontal */
     align-items: center;  /* vertical */
-    font-family: 'Lato', sans-serif;
+    font-family: 'Onest', sans-serif;
     font-weight: 700;
 }
 
@@ -71,7 +76,7 @@ main i {
     margin: 3px;
     font-size: 12em;
     transition: ease-in-out .712s;
-    color: #FFFBE0;
+    color: aliceblue;
 }
 
 main i:hover {
