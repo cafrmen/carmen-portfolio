@@ -5,11 +5,11 @@ const titleText = document.querySelector('.stopShowing');
 const granulatorText = document.querySelector('.granulator');
 const nasaText = document.querySelector('.nasa');
 const rotText = document.querySelector('.rot');
-const calculatorText = document.querySelector('.calculator');
+const artistText = document.querySelector('.artist');
 const granulatorButton = document.getElementById('theGranular');
 const nasaButton = document.getElementById('theNasaPost');
 const rotButton = document.getElementById('theRot');
-const calculatorButton = document.getElementById('theCalculator');
+const artistButton = document.getElementById('theArtist');
 
 const granulator = (e) => {
     e.preventDefault()
@@ -17,7 +17,7 @@ const granulator = (e) => {
     granulatorText.classList.remove('hide');
     nasaText.classList.add('hide');
     rotText.classList.add('hide');
-    calculatorText.classList.add('hide');
+    artistText.classList.remove('hide');
 }
 granulatorButton.addEventListener('pointerdown', granulator);
 
@@ -27,7 +27,7 @@ const nasa = (e) => {
     granulatorText.classList.add('hide');
     nasaText.classList.remove('hide');
     rotText.classList.add('hide');
-    calculatorText.classList.add('hide');
+    artistText.classList.remove('hide');
 }
 nasaButton.addEventListener('pointerdown', nasa);
 
@@ -37,19 +37,19 @@ const rot = (e) => {
     granulatorText.classList.add('hide');
     nasaText.classList.add('hide');
     rotText.classList.remove('hide');
-    calculatorText.classList.add('hide');
+    artistText.classList.remove('hide');
 }
 rotButton.addEventListener('pointerdown', rot);
 
-const calculator = (e) => {
+const artist = (e) => {
     e.preventDefault();
     titleText.classList.add('hide');
     granulatorText.classList.add('hide');
     nasaText.classList.add('hide');
     rotText.classList.add('hide');
-    calculatorText.classList.remove('hide');
+    artistText.classList.remove('hide');
 }
-calculatorButton.addEventListener('pointerdown', calculator);
+artistButton.addEventListener('pointerdown', artist);
 
 function toggleButton() {
     divMenu.classList.toggle('show');
