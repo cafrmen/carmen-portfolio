@@ -17,7 +17,7 @@ const granulator = (e) => {
     granulatorText.classList.remove('hide');
     nasaText.classList.add('hide');
     rotText.classList.add('hide');
-    artistText.classList.remove('hide');
+    artistText.classList.add('hide');
 }
 granulatorButton.addEventListener('pointerdown', granulator);
 
@@ -27,7 +27,7 @@ const nasa = (e) => {
     granulatorText.classList.add('hide');
     nasaText.classList.remove('hide');
     rotText.classList.add('hide');
-    artistText.classList.remove('hide');
+    artistText.classList.add('hide');
 }
 nasaButton.addEventListener('pointerdown', nasa);
 
@@ -37,7 +37,7 @@ const rot = (e) => {
     granulatorText.classList.add('hide');
     nasaText.classList.add('hide');
     rotText.classList.remove('hide');
-    artistText.classList.remove('hide');
+    artistText.classList.add('hide');
 }
 rotButton.addEventListener('pointerdown', rot);
 
